@@ -1,93 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Membership Table</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      margin: 30px;
-      font-family: Arial, sans-serif;
-    }
-    table {
-      border-collapse: collapse;
-      width: 600px;
-      text-align: left;
-    }
-    th, td {
-      border: 1px solid #888;
-      padding: 8px 12px;
-    }
-    thead th {
-      background-color: lightcoral;
-    }
-    thead th:nth-child(3) {
-      background-color: #888;
-    }
-    thead th:nth-child(4) {
-      background-color: #f8d; 
-    }
-    tfoot th {
-      text-align: right;
-      border-top: 2px dashed #555;
-      background-color: #888;
-    }
-    tfoot th:last-child {
-      text-align: center;
-    }
-    th[rowspan] {
-      background-color:#888;
-    }
-    tbody th{
-        background-color:blue;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice table</title>
+    <link rel="shortcut icon" href="./images/2.png" type="image/x-icon">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            margin: 30px;
+        }
+        table,tr,th,td{
+            border:1px solid black;
+            padding: 8px 10px;
+            border-collapse: collapse;
+        }
+        .I{
+            background-color: aqua;
+        }
+        .O{
+            background-color: lightgreen;
+        }
+        .R{
+            background-color: lightcoral;
+        }
+        .P{
+            background-color: blueviolet;
+        }
+    </style>
 </head>
 <body>
-  <table border="1">
-    <thead>
-      <tr>
-        <th rowspan="2">Name</th>
-        <th rowspan="2">ID</th>
-        <th colspan="2">Membership Dates</th>
-        <th rowspan="2">Balance</th>
-      </tr>
-      <tr>
-        <th>Joined</th>
-        <th>Canceled</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Margaret Nguyen</th>
-        <td>427311</td>
-        <td>June 3, 2010</td>
-        <td>n/a</td>
-        <td>0.00</td>
-      </tr>
-      <tr>
-        <th>Edvard Galinski</th>
-        <td>533175</td>
-        <td>January 13, 2011</td>
-        <td>April 8, 2017</td>
-        <td>37.00</td>
-      </tr>
-      <tr>
-        <th>Hoshi Nakamura</th>
-        <td>601942</td>
-        <td>July 23, 2012</td>
-        <td>n/a</td>
-        <td>15.00</td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <th colspan="4">Total balance</th>
-        <th>52.00</th>
-      </tr>
-    </tfoot>
-  </table>
+    <table border="1">
+        <thead>
+            <tr>
+                <th class="I" rowspan="2">Name</th>
+                <th class="I" rowspan="2">ID</th>
+                <th class="I" colspan="2">Membership</th>
+                <th class="I" rowspan="2">Balance</th>
+            </tr>
+            <tr>
+                <th class="O">joined</th>
+                <th class="R">Canceled</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th class="P">Margeret Nguyen</th>
+                <td>427311</td>
+                <td>June 3,2010</td>
+                <td>n/a</td>
+                <td>0.00</td>
+            </tr>
+            <tr>
+                <th class="P">Edvard Galinski</th>
+                <td class="P">5331775</td>
+                <td class="P">January 13,2011</td>
+                <td class="P">April 8,2017</td>
+                <td class="P">37.00</td>
+            </tr>
+            <tr>
+                <th class="P">Hoshi Nakamura</th>
+                <td>601942</td>
+                <td>July 23, 2012</td>
+                <td>n/a</td>
+                <td>15.00</td>
+            </tr>
+        </tbody>
+        <tfoot class="I">
+            <tr>
+                <th colspan="4" style="border-top: 2px dashed; text-align: end;">Total balance</th>
+                <th style="border-top: 2px dashed;">52.00</th>
+            </tr>
+        </tfoot>
+    </table>
 </body>
 </html>
